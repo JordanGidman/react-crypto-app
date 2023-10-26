@@ -2,14 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.6rem;
+}
+
+.title {
+  font-size: 4rem;
 }
 
 .icon {
   font-size: 2rem;
-  color: #6900ff;
+  color: #7048e8;
 }
 
 .purple {
-  color: #6900ff;
+  color: #7048e8;
 }

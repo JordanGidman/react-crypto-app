@@ -2,10 +2,14 @@ import Coin from "../routes/Coin";
 import CoinItem from "./CoinItem";
 import "./Coins.css";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
-function Coins({ coins }) {
+// import Search from "./components/Search";
+
+function Coins({ coins, query, setQuery, setNumResults }) {
   return (
     <div className="container">
+      <Search query={query} setQuery={setQuery} />
       <div>
         <div className="heading">
           <p>#</p>
@@ -24,6 +28,17 @@ function Coins({ coins }) {
           );
         })}
       </div>
+
+      <button
+        className="load-more-btn"
+        onClick={() =>
+          setNumResults((numResults) =>
+            numResults < 100 ? numResults + 10 : numResults
+          )
+        }
+      >
+        Load More
+      </button>
     </div>
   );
 }

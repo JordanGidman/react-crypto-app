@@ -7,9 +7,10 @@ import Coin from "./routes/Coin";
 
 function App() {
   const [coins, setCoins] = useState([]);
+  const [query, setQuery] = useState("");
+  const [numResults, setNumResults] = useState(10);
 
-  const url =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=gbp&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=en";
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=gbp&order=market_cap_desc&per_page=${numResults}&page=1&sparkline=false&locale=en`;
 
   useEffect(() => {
     axios
@@ -21,13 +22,23 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [url]);
 
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Coins coins={coins} />} />
+        <Route
+          path="/"
+          element={
+            <Coins
+              coins={coins}
+              query={query}
+              setQuery={setQuery}
+              setNumResults={setNumResults}
+            />
+          }
+        />
         <Route path="/coin" element={<Coin />}>
           <Route path=":coinId" element={<Coin />} />
         </Route>

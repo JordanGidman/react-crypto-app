@@ -1,0 +1,33 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.search-input,
+.search-btn {
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  background-color: #18191b;
+  border: none;
+  color: #efefef;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+}
+
+.search-input {
+  /* position: relative; */
+  max-width: 600px;
+}
+
+.search-icon {
+  height: 1.65rem;
+  width: 1.65rem;
+}
+
+/* .search-btn {
+  position: absolute;
+  right: 40%;
+} */

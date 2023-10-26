@@ -12,6 +12,7 @@
   margin: 2rem 1rem;
   padding: 0.7rem 1rem;
   font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .coin-name {
@@ -26,11 +27,13 @@
   box-shadow: 0 0 12px #18191b;
   margin: 2rem 1rem;
   padding: 0.7rem 1rem;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .coin-row:hover {
   transform: scale(1.04);
-  transition: 0.3s ease-in-out;
+
   cursor: pointer;
 }
 
@@ -43,6 +46,29 @@ img {
 .img-symbol {
   display: flex;
   align-items: center;
+}
+
+.load-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fefefe;
+  border: none;
+  margin: 3rem auto;
+  transition: all 0.3s ease;
+
+  border: 1px solid #7048e8;
+  box-shadow: 0 0 8px #7048e8;
+  background-color: #7048e8;
+  border-radius: 8px;
+}
+
+.load-more-btn:hover {
+  cursor: pointer;
+  transform: scale(1.07);
 }
 
 @media screen and (max-width: 720px) {
